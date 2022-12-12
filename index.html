@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilo2.css">
+</head>
+
+<body>
+    <main class="tela-principal">
+        <section class="conteudos">
+            <h1 class="centralizar">Conversor de Temperaturas</h1>
+            <p class='centralizar'>Use o slider para converter automaticamente.</p>
+
+            <div class="form-group">
+                <label for="celsius">Celsius</label>
+                
+                <input type="number" min='-273.00' max='100.00' step='0.01' name="numeroC" id="numeroC" value='100.00'
+                    disabled /> °C
+                
+                    <div class="slider">
+                    <span id='minC'>-273.00</span>
+                    <input type="range" min='-273.00' max='100.00' step='0.01' name="celsius" id="celsius" value='100.00'
+                        onChange='atualizaC(); atualizaF(); atualizaK()' class="animar" />
+                    <span id='maxC'>100.00</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="fahrenheit">Fahrenheit</label>
+
+                <input type="number" min='-459.00' max='212.00' step='0.01' name="numeroF" id="numeroF" value="212.00" disabled> °F
+
+                <div class='slider'>
+                    <span id='minC'>-459.40</span>
+                    <input type="range" min='-459.00' max='212.00' step='0.01' name="fahrenheit" id="fahrenheit"
+                        value='212.00' onChange='alteraCatravesDoF(); alteraF(); alteraKatravesDoF()' class="animar" />
+                    <span id='maxC'>212.00</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="kelvin">Kelvin</label>
+                <input type="number" min='0.00' max='375.15' step='0.01' name="numeroK" id="numeroK" disabled> K
+
+                <div class="slider">
+                    <span id='minC'>0.00</span>
+                    <input type="range" min='0.00' max='373.15' step='0.01' name="kelvin" id="kelvin" value='373.15' onchange="alteraK();alteraCatravesDoK();alteraFatravesDoK()" class="animar" />
+                    <span id='maxC'>373.15</span>
+                </div>
+            </div>
+            <button id='btnZerar' onClick="zerar()">Recomeçar</button>
+            <footer class="centralizar">Desenvolvido por Luciano Sergio &copy; 2022</footer>
+        </section>
+    </main>
+
+    <script src="./js/script2.js"></script>
+</body>
+
+</html>
