@@ -1,5 +1,8 @@
 # Conversor de temperatura
-Este é um projeto de estudo de desenvolvimento web com Javascript puro.
+Este é um projeto de estudo desenvolvido em Javascript puro, baseado no canal 
+Professor Edson Maia.
+
+Link do vídeo da aula: https://www.youtube.com/watch?v=rZa_9nytgCQ
 
 É um Conversor de Temperaturas (Celsius, Fahrenheit, Kelvin) utilizando Javascript, HTML e CSS.
 
